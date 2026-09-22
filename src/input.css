@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-poppins: "Poppins", sans-serif;
+  --font-inter: "Inter", sans-serif;
+}
+
+@utility container {
+  @apply mx-auto mt-6 max-w-7xl px-6 py-12 lg:mt-20 lg:px-12;
+}
+
+@utility text-h2 {
+  @apply font-poppins mb-10 text-5xl leading-normal font-medium text-gray-800 sm:font-semibold max-w-2xl lg:leading-relaxed;
+}
+
+@utility card-outer {
+  @apply bg-slate-100 p-px hover:bg-linear-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200;
+}
+
+@utility card-inner {
+  @apply bg-slate-50 group-hover:bg-linear-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50;
+}
+
+@utility a-hover {
+  @apply border-b border-dotted border-y-gray-300 hover:border-solid hover:border-gray-600;
+}
+
+.mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.mobile-menu.open {
+  max-height: 500px;
+}
